@@ -1,0 +1,15 @@
+<div class="centered-content">
+    <div class="list-box">
+        <h1 class="display-6" *ngIf="list">Edit list</h1>
+        <form [formGroup]="form" (ngSubmit)="update()">
+        <div class="input-group mb-5">
+            <span class="input-group-text" style="margin-left: 5%;">Title</span>
+            <input type="text" placeholder="Change list name..." class="form-control" formControlName="titleControl" style="margin-right: 5%">
+          </div>
+          <div class="d-grid gap-2 d-flex justify-content-end" style="margin-right: 5%; padding-top: 2%;">
+            <button class="btn btn-light me-2" type="button" (click)="cancel()" >Cancel</button>
+            <button class="btn btn-light" type="button" [disabled]="!form.valid" (click)="update()">Update</button>
+          </div>
+        </form>
+    </div> 
+</div>

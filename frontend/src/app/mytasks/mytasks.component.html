@@ -1,0 +1,56 @@
+<body>
+  <div class="container justify-content-center">
+    <div class="container col-sm-10 col-lg-8 col-xl-6 col-12 task-manager-content border border-light border-4" style="max-height: 400px"> 
+        <div class="col-4">
+                <h5 class="card-header">Lists<button class="btn btn-outline-secondary btn-circle btn-lg align-right bi bi-plus-lg" type="button" [routerLink]="'nl/newlist'"></button> </h5>
+                <div class="lists" style="height: 340px; overflow-y: scroll;" tabindex="0" data-bs-spy="scroll">
+                <ul class="list-group list-group-flush">
+                       <!--     <div class="dropdown">
+                      <button type="button" data-bs-toggle="dropdown" class="btn btn-outline-secondary dropdown-toggle bi bi-gear" id="dropdownMenuButton1">
+                        
+                      </button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">edit</a></li>
+                        <li><a class="dropdown-item" href="#">delete</a></li>
+                      </ul>
+                    </div> -->
+             
+                    <a class="list-group-item list-group-item-action" *ngFor="let list of lists" (click)="readAllTasks()" [routerLink]="['/mytasks/', list._id]" routerLinkActive="active">{{list.title}}</a>
+                  </ul>
+                  <div class="d-grid gap-2 d-flex justify-content-md-start" style="margin-left: 5%; padding-top: 1%; padding-bottom: 25%;">
+              
+                    <label class="dropdown" *ngIf="listClicked">
+                      <div class="dd-button"><span width="10" height="10" fill="currentColor" style="padding-left: 0px; margin-left:0%; padding-right: 2%;" class="bi bi-gear">
+                      </span>
+                      </div>
+                      <input type="checkbox" class="dd-input">
+                      <ul class="dd-menu">
+                        <li [routerLink]="'el/editList'">edit</li>
+                        <li class="divider"></li>
+                        <li class="link2" (click)="deleteList()" >delete</li>
+                      </ul>
+                    </label>
+                  </div>
+              </div>
+        </div>
+
+        <!-- Task Elements-->
+        <div class="col-8">
+                <h5 class="card-header">Tasks <button class="btn btn-outline-secondary btn-circle btn-lg align-right bi bi-plus-lg" type="button" *ngIf="listClicked" [routerLink]="'nt/newtask'"></button></h5>
+                <div class="tasks" style="height: 342px; overflow-y: scroll; background-color: rgb(218, 252, 241);" tabindex="0" data-bs-spy="scroll">
+                  <ul class="list-group list-group-flush grid">
+                    <li style="background-color: rgb(218, 252, 241);" class="task-item list-group-item list-group-item-tasks list-group-item-action text-start" *ngFor="let task of tasks" (click)="onTaskClick(task)" [ngClass]="{'completed': task.completed}" >{{task.title}} 
+                      <button type="button" class="btn btn-sm bi bi-trash3 align-right" (click)="deleteTask(task)" ></button> 
+                      <button type="button" class="btn btn-sm bi bi-pencil align-right" [routerLink]="['tasks/', task._id]" ></button></li>
+                      <h6 class="no-tasks-text" *ngIf="tasks.length == 0"> No tasks here yet! Click the add button to create a new task.</h6>
+                      <h6 class="no-tasks-text" *ngIf="!listClicked"> But first select a list from the sidebar on the left.</h6>
+
+                  </ul>
+
+              </div>
+        </div>
+
+    </div>
+       
+    </div>
+</body>

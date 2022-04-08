@@ -1,0 +1,24 @@
+#img-home {
+    height: 100%;
+    width: 100%;
+}
+.home-text {
+    font-size: 300%;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.container-home {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+  /* text block centre */
+.text-block {
+    position: absolute;
+    width: 100%;
+    top: 25%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    background-color: rgba(var(--bs-dark-rgb));
+    color: white;
+  }

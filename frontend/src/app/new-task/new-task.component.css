@@ -1,0 +1,23 @@
+.centered-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 3%; 
+}
+
+.list-box {
+    min-height: 280px;
+    width: 100%;
+    max-width: 500px;
+    background:aquamarine;
+    margin: 5%;
+   
+}
+h1 {
+    color: rgb(1, 6, 10); 
+    font-weight: bold;
+    padding-left: 5%;
+    padding-bottom: 5%;
+    padding-top: 5%;
+}
