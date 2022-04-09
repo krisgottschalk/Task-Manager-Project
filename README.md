@@ -1,4 +1,5 @@
 # Project Task Manager
+<br>
 
 >Task Manager is a simple web based application that allows you to create your own lists and add tasks to those lists. It was created to help you keep track of all the things you have (or want) to do in your everyday life. 
 
@@ -11,12 +12,13 @@
 * [Screenshots](#screenshots)
 * [Video](#video)
 * [Installation](#installation)
-* [Usage](#usage)
+* [Usage Examples](#usage-examples)
 * [Roadmap](#roadmap)
 * [Contact](#contact)
 
 
 ## Technologies Used
+
 - Angular
 - NodeJs
 - MongoDB
@@ -28,6 +30,7 @@
 
 - A sign up form allows you to register.
 - Once registered a simple login makes sure only authorized users can access your lists and tasks.
+- Dialog windows are in use for errors during login and registration.
 - Create, read, update and delete lists and tasks. 
 - Toggle the state of a task to complete/ uncomplete by simply clicking on it.
 
@@ -51,7 +54,7 @@
 
 To get this project up and running follow these steps:
 
-1. Open the terminal on your computer. Navigate to the place where you want to save the Task Manager Project with the help of the command `cd`. Now you can create a folder for the project and change into it.
+1. Open the terminal on your computer. Navigate to the place where you want to save the Task Manager Project using the command `cd`. Now you can create a folder for the project and change into it.
 ```bash
 mkdir TaskManager
 cd TaskManager
@@ -110,6 +113,7 @@ ng serve
 ```
 
 ## Usage Examples
+
 All the components of the frontend can be found in the `frontend/src/app` folder. For example, if you want to edit the dialog window that opens in the login component, look for the `login/error-dialog` folder and open the `error-dialog.component.html`. Here you can easily customize what you want to say. 
 ```
 <h2 mat-dialog-title>Wrong login credentials?</h2>
@@ -137,7 +141,7 @@ The error-dialog component is used in the `login.component.ts` and is being call
   }
 ```
 
-The routing of the apllication is very important too. You can find all the routes in the `app-routing.module.ts`. They will look like this: 
+The routing of the application is very important too. You can find all the routes in the `app-routing.module.ts`. They will look like this: 
 ```
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -158,6 +162,7 @@ For more information on how to develop a project using Angular, check out the An
 
 
 ## Roadmap
+
 ### Improvements that could be made 
 
 - Map lists and their tasks to one user, so each user can create their own lists and tasks by using their login credentials.
@@ -169,4 +174,5 @@ For more information on how to develop a project using Angular, check out the An
 
 
 ## Contact
+
 Created by Christina Gottschalk - you can find me on [Linkedin](https://www.linkedin.com/in/christina-gottschalk/)
