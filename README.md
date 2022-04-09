@@ -35,6 +35,10 @@
 ## Screenshots
 <br>
 
+
+https://user-images.githubusercontent.com/82497617/162575725-e7eeb2ac-b7b7-4632-bdfa-ccb3ffc7137e.mov
+
+
 ![Home Screen](./img/Home_Screenshot%20.png)
 ![Sign Up Screen](./img/Signup%20Screenshot%20.png)
 
