@@ -50,6 +50,9 @@
 
 ## Video
 
+https://user-images.githubusercontent.com/82497617/162583133-2c6775fb-2b93-411c-8764-819b21cd8d35.mov
+
+
 ## Installation
 
 To get this project up and running follow these steps:
