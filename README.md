@@ -67,52 +67,38 @@ cd TaskManager
 
 2. Now we can clone the git repository.
 ```bash
-git clone https://github.com/krisgottschalk/Project_WebApplication.git
+git clone https://github.com/krisgottschalk/Task-Manager-Project.git
 ```
 
 3. Navigate to the frontend and run `npm install`. It installs all the packages and dependencies needed.
 ```bash
-cd Project_WebApplication
+cd Task-Manager-Project
 cd frontend
 npm install
 ```
 
-4. Now go back to the Project_WebApplication directory and go to the backend folder and run the command `npm install` again.
+4. Now go back to the Task-Manager-Project directory and go to the backend folder and run the command `npm install` again.
 ```
 cd ..
 cd backend
 npm install
 ```
 
-5. Next you need to set up a database connection. If you're fine with using a local database, you should try MongoDB. The set up is fairly easy. First run `npm init` in your backend folder. This utility will walk you through creating a package.json file.
-You can hit enter for all the questions that you are asked.
-```
-npm init
-```
- 
-6. Next we need the Express Module. It's a middleware for http requests. And we should also add the package nodemon as a development dependency.
-```
-npm install express --save
-npm install --save-dev nodemon
-```
-7. To use MongoDB you need to install the mongoose module.
-```
-npm install mongoose --save
-```
-8. To create a new database with MongoDB you can use mongosh. The installation process can be found [_here_](https://www.mongodb.com/docs/mongodb-shell/install/#std-label-mdb-shell-install).
-Once your done with the installation, type mongosh in your terminal. To create the database where we can save our lists and tasks, type `use TaskManager` in your terminal.
+5. Next you need to set up a database connection. If you're fine with using a local database, you should try MongoDB. To create a new database with MongoDB, you can use mongosh. The installation process can be found [_here_](https://www.mongodb.com/docs/mongodb-shell/install/#std-label-mdb-shell-install).
+
+6. Once your done with the installation, type mongosh in your terminal. To create the database where we can save our lists and tasks, type `use TaskManager` in your terminal.
 ```
 use TaskManager
 ```
-9. Open the project in your IDE and create a file called `.env` in your backend folder. Paste `DB_CONNECTION = mongodb://127.0.0.1:27017/TaskManager` to use this as your DB Connection String to connect to your local database.
+7. Open the project in your IDE and create a file called `.env` in your backend folder. Paste `DB_CONNECTION = mongodb://127.0.0.1:27017/TaskManager` to use this as your DB Connection String to connect to your local database.
 ```
 DB_CONNECTION = mongodb://127.0.0.1:27017/TaskManager
 ```
-10. Now run `npm run watch` to start the server in your backend.
+8. Now run `npm run watch` to start the server in your backend.
 ```
 npm run watch
 ```
-11. Open a second terminal, change into the frontend directory and run `ng serve` to start the frontend.
+9. Open a second terminal, change into the frontend directory and run `ng serve` to start the frontend.
 ```
 ng serve
 ```
