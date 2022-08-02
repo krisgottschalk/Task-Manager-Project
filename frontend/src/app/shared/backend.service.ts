@@ -9,8 +9,8 @@ import { User } from './user';
   providedIn: 'root'
 })
 export class BackendService {
-  tasksUrl ='http://localhost:3000/lists';
-  userURL ='http://localhost:3000/users';
+  tasksUrl ='http://34.159.134.25:3000/lists';
+  userURL ='http://34.159.134.25:3000/users';
 
   constructor(private http: HttpClient) { }
 
